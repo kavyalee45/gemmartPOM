@@ -10,7 +10,7 @@ public class SendMailPage extends BasePage {
 		super(driver);
 	}
 
-	//Elements
+	// Elements
 
 	@FindBy(id = "identifierId")
 	WebElement emailID;
@@ -18,7 +18,7 @@ public class SendMailPage extends BasePage {
 	@FindBy(xpath = "//*[@id=\"identifierNext\"]/div/button/span")
 	WebElement emailNext;
 
-	@FindBy(name="Passwd")
+	@FindBy(name = "Passwd")
 	WebElement password;
 
 	@FindBy(xpath = "//*[@id=\\\"passwordNext\\\"]/div/button/span")
@@ -39,7 +39,7 @@ public class SendMailPage extends BasePage {
 	@FindBy(xpath = "//div[@id=':7u']")
 	WebElement sendBtn;
 
-	//action methods
+	// action methods
 	public void enterEmail(String email) {
 		emailID.sendKeys(email);
 		emailNext.click();
@@ -69,13 +69,5 @@ public class SendMailPage extends BasePage {
 	public void clickSend() {
 		sendBtn.click();
 	}
-
-
-
-
-
-
-
-
 
 }
